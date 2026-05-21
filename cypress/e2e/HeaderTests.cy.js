@@ -1,5 +1,6 @@
 import BasePage from "../helpers/PageModels/BasePage";
 import Footer from "../helpers/Components/Footer";
+import Header from "../helpers/Components/Header";
 
 Cypress.on("uncaught:exception", (err) => {
   return false;
@@ -23,12 +24,12 @@ describe("Check header buttons", () => {
 
   it("Contacts scroll test", () => {
     basePage.header.contactsBtn.click();
-    cy.get("#contactsSection").should("be.visible");
+    basePage.footer.contactsSection.checkVisibility();
   });
 
   it("About scroll test", () => {
     basePage.header.aboutBtn.click();
-    cy.get("#aboutSection").should("be.visible");
+    basePage.footer.aboutSection.checkVisibility();
   });
 
   it("Guest Login redirect test", () => {
@@ -38,6 +39,6 @@ describe("Check header buttons", () => {
 
   it("Sign In modal test", () => {
     basePage.header.signIn.click();
-    cy.get(".modal-title").should("be.visible");
+    basePage.login.loginTitle.checkVisibility();
   });
 });
