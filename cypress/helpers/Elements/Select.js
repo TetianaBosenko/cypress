@@ -5,7 +5,7 @@ export default class extends BaseElement {
     super(selector);
   }
 
-  enterValue(text, options) {
-    return this.element.type(text, options);
+  selectValue(value) {
+    return this.element.type(value);
   }
 }

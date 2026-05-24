@@ -31,4 +31,12 @@ export default class {
   checkVisibility() {
     return this.element.should("be.visible");
   }
+
+  checkText(expectedText) {
+    return this.element.should("contain.text", expectedText)
+  }
+
+  click() {
+    return this.element.click();
+  }
 }
