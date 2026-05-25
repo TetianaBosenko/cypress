@@ -16,7 +16,7 @@ describe("Login tests", () => {
 
   it("Successful login", () => {
     basePage.header.signIn.click();
-    basePage.login.login("bruce.wayne@gmail.com", "T6urt2mv!");
+    basePage.login.login(Cypress.env("username"), Cypress.env("password"));
     basePage.containUrlCheck("/panel/garage");
   });
 });
