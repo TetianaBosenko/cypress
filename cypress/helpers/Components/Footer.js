@@ -1,29 +1,41 @@
+import BaseElement from "../Elements/BaseElement";
+import Button from "../Elements/Button";
+
 export default class {
   get faceBookBtn() {
-    return cy.get(".socials_icon.icon-facebook");
+    return new Button(".socials_icon.icon-facebook");
   }
 
   get telegramBtn() {
-    return cy.get(".socials_icon.icon-telegram");
+    return new Button(".socials_icon.icon-telegram");
   }
 
   get youTubeBtn() {
-    return cy.get(".socials_icon.icon-youtube");
+    return new Button(".socials_icon.icon-youtube");
   }
 
   get instagramBtn() {
-    return cy.get(".socials_icon.icon-instagram");
+    return new Button(".socials_icon.icon-instagram");
   }
 
   get linkedinBtn() {
-    return cy.get(".socials_icon.icon-linkedin");
+    return new Button(".socials_icon.icon-linkedin");
   }
 
   get ithillelWebsiteLink() {
-    return cy.get('a[href="https://ithillel.ua"]');
+    return new Button('a[href="https://ithillel.ua"]');
   }
 
   get ithillelEmail() {
-    return cy.get('a[href="mailto:developer@ithillel.ua"]');
+    return new Button('a[href="mailto:developer@ithillel.ua"]');
   }
+
+  get contactsSection() {
+    return new BaseElement("#contactsSection");
+  }
+
+  get aboutSection() {
+    return new BaseElement("#aboutSection");
+  }
+
 }

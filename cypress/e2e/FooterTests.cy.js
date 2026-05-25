@@ -12,43 +12,43 @@ describe("Check footer buttons", () => {
   });
 
   it("Facebook redirect test", () => {
-    basePage.footer.faceBookBtn.parent().invoke("removeAttr", "target").click();
+    basePage.footer.faceBookBtn.removeParentAttr("target");
+    basePage.footer.faceBookBtn.click();
     basePage.containUrlCheck("facebook");
   });
 
   it("Telegram redirect test", () => {
-    basePage.footer.telegramBtn
-      .parent()
-      .should("have.attr", "href")
-      .and("contain", "t.me");
+    basePage.footer.telegramBtn.checkParentAttr("href", "t.me");
   });
 
   it("Youtube redirect test", () => {
-    basePage.footer.youTubeBtn.parent().invoke("removeAttr", "target").click();
+    basePage.footer.youTubeBtn.removeParentAttr("target");
+    basePage.footer.youTubeBtn.click();
     basePage.containUrlCheck("youtube");
   });
 
   it("Instagram redirect test", () => {
-    basePage.footer.instagramBtn
-      .parent()
-      .invoke("removeAttr", "target")
-      .click();
+    basePage.footer.instagramBtn.removeParentAttr("target");
+    basePage.footer.instagramBtn.click();
     basePage.containUrlCheck("instagram");
   });
 
   it("Linkedin redirect test", () => {
-    basePage.footer.linkedinBtn.parent().invoke("removeAttr", "target").click();
+    basePage.footer.linkedinBtn.removeParentAttr("target");
+    basePage.footer.linkedinBtn.click();
     basePage.containUrlCheck("linkedin");
   });
 
   it("Ithillel Website redirect test", () => {
-    basePage.footer.ithillelWebsiteLink.invoke("removeAttr", "target").click();
+    basePage.footer.ithillelWebsiteLink.removeAttr("target");
+    basePage.footer.ithillelWebsiteLink.click();
     basePage.containUrlCheck("ithillel");
   });
 
   it("Ithillel email redirect test", () => {
-    basePage.footer.ithillelEmail
-      .should("have.attr", "href")
-      .and("contain", "mailto:developer@ithillel.ua");
+    basePage.footer.ithillelEmail.checkAttr(
+      "href",
+      "mailto:developer@ithillel.ua",
+    );
   });
 });

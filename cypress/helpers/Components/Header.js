@@ -1,25 +1,27 @@
+import Button from "../Elements/Button";
+
 export default class {
   get headerLogo() {
-    return cy.get('[class="header_logo"]');
+    return new Button('[class="header_logo"]');
   }
 
   get guestLogIn() {
-    return cy.get('[class="header-link -guest"]');
+    return new Button('[class="header-link -guest"]');
   }
 
   get signIn() {
-    return cy.get('[class="btn btn-outline-white header_signin"]');
+    return new Button('[class="btn btn-outline-white header_signin"]');
   }
 
   get homeBtn() {
-    return cy.get('[class="btn header-link -active"]');
+    return new Button('[class="btn header-link -active"]');
   }
 
   get contactsBtn() {
-    return cy.get('[appscrollto="contactsSection"]');
+    return new Button('[appscrollto="contactsSection"]');
   }
 
   get aboutBtn() {
-    return cy.get('[appscrollto="aboutSection"]');
+    return new Button('[appscrollto="aboutSection"]');
   }
 }
