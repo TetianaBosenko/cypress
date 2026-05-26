@@ -35,4 +35,8 @@ export default class Expenses extends BasePage {
   expenseItem(value) {
     return new BaseElement(`tr td:contains('${value}')`);
   }
+
+  navigate(carId) {
+    return super.navigate(`/panel/expenses?carId=${carId}`)
+  }
 }

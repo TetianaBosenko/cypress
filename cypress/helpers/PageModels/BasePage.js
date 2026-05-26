@@ -14,8 +14,8 @@ export default class {
     this._url = url;
   }
 
-  navigate() {
-    cy.visit(this._url, {
+  navigate(url) {
+    cy.visit(url || this._url, {
       auth: {
         username: "guest",
         password: "welcome2qauto",
